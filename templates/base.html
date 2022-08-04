@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel="stylesheet" type='text/css'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no;user-scalable=0;"/>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body bgcolor="blue">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">MQUIZ</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  <a class="nav-link" href="/login"><b>play now</b></a>
+                  <a class="nav-link" href="/logout">logout</a>
+                  <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+                </div>
+              </div>
+            </div>
+          </nav>
+        <h1 align="center"><u>MATHS QUIZ</u></h1>
+        {% block content %}
+        {% endblock %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<style>
+  h1{
+    font-size: 350%;
+  }
+  .navbar-nav a{
+    font-weight: 300;
+    font-size: 100%;
+  }
+  .navbar-toggler{
+    font-size: 250%;
+  }
+</style>
+    </body>
+    </html>

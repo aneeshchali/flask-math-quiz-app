@@ -1,0 +1,34 @@
+{%  extends "base.html" %}
+{% block title %} login page {% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p align="center">{{msg}}!</p>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+<form action= "#" method ="post" class="details">
+    <p>please enter your name:</p>
+    <p><input type ="text" name="nm" placeholder="name:" required/></p>
+    <select name="km" id="cars">
+  <option value="easy">easy</option>
+  <option value="medium">medium</option>
+  <option value="hard">hard</option>
+</br>
+<input type="submit" class="space" value="lets play!"/>
+</select>
+
+<style>
+.details{
+	text-align: center;
+	font-size: 150%;
+}
+.space{
+	margin: 0 1%;
+}
+</style>
+</form>
+{% endblock %}

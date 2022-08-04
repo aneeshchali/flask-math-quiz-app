@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title  %}user{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p align="center">{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+</br>
+
+    <h2 align="center"><u>{{name}}</u> your score is <u>{{score}}</u>!!</h2>
+
+    <h2 align="center"><a href="/user">play again!</a></h2>
+</br>
+    <h6 align="center"><a href="/logout">change difficulty</a></h6>
+
+    <div class="moo">
+        <p><b>questions</b></p><p><b>your input</b></p><p><b>answers</b></p>
+    </div>
+    <div class="ko">
+        <p>{{q1}}</p><p>{{gu1}}</p><p><b>{{a1}}</p>
+    </div>
+    <div class="ko">
+        <p>{{q2}}</p><p>{{gu2}}</p><p><b>{{a2}}</p>
+        </div>
+    <div class="ko">
+        <p>{{q3}}</p><p>{{gu3}}</p><p><b>{{a3}}</p>
+    </div>
+    <div class="ko">
+        <p>{{q4}}</p><p>{{gu4}}</p><p><b>{{a4}}</p>
+    </div>
+    <div class="ko">
+        <p>{{q5}}</p><p>{{gu5}}</p><p><b>{{a5}}</p>
+    </div>
+    <div class="ko">
+        <p>{{q6}}</p><p>{{gu6}}</p><p><b>{{a6}}</p>
+    </div>
+    <div class="ko">
+        <p>{{q7}}</p><p>{{gu7}}</p><p><b>{{a7}}</p>
+    </div>
+    <div class="ko">
+        <p>{{q8}}</p><p>{{gu8}}</p><p><b>{{a8}}</p>
+    </div>
+    <div class="ko">
+        <p>{{q9}}</p><p>{{gu9}}</p><p><b>{{a9}}</p>
+    </div>
+    <div class="ko">
+        <p>{{q10}}</p><p>{{gu10}}</p><p><b>{{a10}}</p>
+    </div>
+<h2 align="center"><a href="/user">play again!</a></h2>
+</br>
+</br>
+
+    <style>
+        .ko{
+            text-align: center;
+        }
+        .ko p{
+            display: inline-block;
+            margin:6%
+        }
+        .moo{
+            text-align: center;
+            font-weight: 700;
+            font-size: larger;
+        }
+        .moo p{
+            display: inline-block;
+            margin: 2%
+        }
+        .lol{
+            font-size: 100%;
+            font-weight: bolder;
+            
+        }
+        .lol p{
+            text-decoration:solid;
+        }
+        p{
+            font-weight: 400;
+            font-size:100%
+        }
+    </style>
+
+
+
+
+{% endblock %}

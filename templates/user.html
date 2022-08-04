@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title  %}user{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p align="center">{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+<form action= "/result" method ="POST" class="details">
+<p>{{user}}<input name="someid" type="number" step="any" required oninput="valid(this)"/></p>
+<p>{{user1}}<input name="someid1" type="number" step="any" required oninput="valid(this)"/></p>
+<p>{{user2}}<input name="someid2" type="number" step="any" required oninput="valid(this)"/></p>
+<p>{{user3}}<input name="someid3" type="number" step="any" required oninput="valid(this)"/></p>
+<p>{{user4}}<input name="someid4" type="number" step="any" required oninput="valid(this)"/></p>
+<p>{{user5}}<input name="someid5" type="number" step="any" required oninput="valid(this)"/></p>
+<p>{{user6}}<input name="someid6" type="number" step="any" required oninput="valid(this)"/></p>
+<p>{{user7}}<input name="someid7" type="number" step="any" required oninput="valid(this)"/></p>
+<p>{{user8}}<input name="someid8" type="number" step="any" required oninput="valid(this)"/></p>
+<p>{{user9}}<input name="someid9" type="number" step="any" required oninput="valid(this)"/></p>
+<input class="first" type="submit" class="space" value="DONE"/>
+</form>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+<style>
+    p{
+        margin-left:30%;
+        font-size:125%;
+        margin-top: 5%;
+    }
+    input{
+        width: 75px;
+        margin-left:auto;
+    }
+    .first{
+        margin-left: 45%;
+    }
+</style>
+
+<script> 
+    var el_up = document.getElementById("GFG_UP"); 
+    var el_down = document.getElementById("GFG_DOWN"); 
+    el_up.innerHTML =  "Type in the box to see whether the input is valid or not."; 
+    var RegExp = new RegExp(/^\d*\.?\d*$/); 
+    var val = document.getElementById("input").value; 
+
+    function valid(elem) 
+    { 
+        if (RegExp.test(elem.value)) 
+        { 
+            val = elem.value; 
+            el_down.innerHTML = "Typed Valid Character."; 
+        } 
+        else 
+        { 
+            elem.value = val; 
+            el_down.innerHTML = "Typed Invalid Character."; 
+        } 
+    } 
+</script> 
+
+
+
+{% endblock %}

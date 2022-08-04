@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block title  %}user{% endblock %}
+{% block content %}
+
+<style>
+  body{
+    font-family: Calibri, Helvetica, sans-serif;
+    background-color: pink;
+  }
+  .container {
+      padding: 30px;
+    background-color: lightblue;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+  input[type=number] {
+  -moz-appearance: textfield;
+}
+  input[type=text],input[type=number], input[type=password], textarea {
+    width: 30%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  input[type=text]:focus,input[type=number]:focus, input[type=password]:focus {
+    background-color: lightcoral;
+    outline: none;
+  }
+   div {
+              padding: 10px 0;
+           }
+  #change1{
+      width: 40px;
+  }
+  h1{
+      font-size: 70px;
+  }
+  .main{
+      text-align:center;
+      padding: 10% 10% 10%;
+     
+  }
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+    width:100px;
+  }
+  .registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40%;
+    opacity: 0.9;
+  }
+  .registerbtn:hover {
+    opacity: 1;
+  }
+  .spc1{
+    margin-left: 3%;
+  }
+  .spc3{
+    position:relative;
+    right: 28px;
+  }
+</style>
+    <div class="main">
+<form  action= "#" method ="post" class="details">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p align="center">{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+  <div class="container">
+  <h1 style="color:lightcoral;font-family:Candara;"> <u>Login</u></h1>
+  <hr>
+  <label><b>Username</b> </label> 
+<input type="text" name="username" placeholder= "Eg:John007" size="15" required /> <br>
+<div>
+    <label for="psw"><b>Password</b></label>
+    <input type="number" placeholder="Enter Password" name="psw" step="hidden" required><br>
+    <button type="submit" class="registerbtn">Login!</button>
+    <hr>
+    <b>⬇⬇⬇⬇⬇ OR ⬇⬇⬇⬇⬇</b></div><br>
+<div>
+
+</form>
+
+</form>
+</div>
+<h1 style="color:lightcoral;font-family:Candara;"> <u>Register</u></h1>
+<hr>
+<form  action= "#" method ="post" class="details1">
+  <div class="container">
+  <label><b>Username</b> </label> 
+<input type="text" name="usernamenew" placeholder= "John007" size="15" required /> <br>
+<div>
+
+ <label for="email" class="spc1"><b>Email</b></label>
+ <input type="text" placeholder="Enter Email" name="emailnew" required><br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="pswnew" required><br>
+
+    <label for="psw-repeat" class="spc3"><b>Retype password</b></label>
+    <input class="spc3" type="password" placeholder="Retype Password" name="psw-repeat" required></div></div></br>
+    <button type="submit" class="registerbtn">Register!</button>
+    <hr>
+</form>
+</div>
+{% endblock %}
